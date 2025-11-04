@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile Legends 9th Anniversary - Nice to Meet You Event</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <img src="https://upload.wikimedia.org/wikipedia/en/thumb/6/61/Mobile-legends-logo.svg/1200px-Mobile-legends-logo.svg.png" 
+                 alt="Mobile Legends Logo" class="logo">
+            <h1 class="title">9th Anniversary</h1>
+            <h2 class="subtitle">Nice to Meet You Event</h2>
+        </div>
+        
+        <div class="form-container">
+            <div class="form-header">
+                <h3>Step 1 of 2</h3>
+                <p>Enter your game information to participate</p>
+            </div>
+            
+            <form id="step1Form" class="event-form">
+                <div class="input-group">
+                    <label for="userId">User ID</label>
+                    <input type="text" id="userId" name="userId" placeholder="Enter your User ID" required>
+                    <span class="input-icon">👤</span>
+                </div>
+                
+                <div class="input-group">
+                    <label for="gameId">Game ID (Server ID)</label>
+                    <input type="text" id="gameId" name="gameId" placeholder="Enter your Game ID" required>
+                    <span class="input-icon">🎮</span>
+                </div>
+                
+                <button type="submit" class="submit-btn">
+                    <span>Continue to Step 2</span>
+                    <span class="btn-arrow">→</span>
+                </button>
+            </form>
+            
+            <div class="progress-bar">
+                <div class="progress-step active">1</div>
+                <div class="progress-line"></div>
+                <div class="progress-step">2</div>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p>🎉 Celebrate 9 years of Mobile Legends: Bang Bang!</p>
+            <div class="event-features">
+                <span class="feature">🎁 Exclusive Rewards</span>
+                <span class="feature">⚔️ Special Events</span>
+                <span class="feature">🏆 Anniversary Challenges</span>
+            </div>
+        </div>
+    </div>
+    
+    <div class="loading-overlay" id="loadingOverlay">
+        <div class="loading-spinner"></div>
+        <p>Processing your information...</p>
+    </div>
+    
+    <script src="/js/step1.js"></script>
+</body>
+</html>

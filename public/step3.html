@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile Legends 9th Anniversary - Redeem Code</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <img src="https://upload.wikimedia.org/wikipedia/en/thumb/6/61/Mobile-legends-logo.svg/1200px-Mobile-legends-logo.svg.png" 
+                 alt="Mobile Legends Logo" class="logo">
+            <h1 class="title">9th Anniversary</h1>
+            <h2 class="subtitle">Special Event</h2>
+        </div>
+        
+        <div class="form-container">
+            <div class="form-header">
+                <h3>Step 3 of 4</h3>
+                <p>Enter the special anniversary redeem code to continue</p>
+            </div>
+            
+            <form id="redeemCodeForm" class="event-form">
+                <div class="input-group">
+                    <label for="redeemCode">Anniversary Redeem Code</label>
+                    <input type="text" 
+                           id="redeemCode" 
+                           name="redeemCode" 
+                           placeholder="Enter your special redeem code"
+                           required 
+                           autocomplete="off"
+                           spellcheck="false">
+                    <span class="input-icon">🎁</span>
+                </div>
+                
+                <div class="security-notice">
+                    <span class="security-icon">🔐</span>
+                    <p>Enter the special anniversary redeem code to unlock exclusive 9th anniversary rewards and continue your registration.</p>
+                </div>
+                
+                <button type="submit" class="submit-btn">
+                    <span>Verify Code</span>
+                    <span class="btn-arrow">→</span>
+                </button>
+            </form>
+            
+            <div class="progress-bar">
+                <div class="progress-step completed">1</div>
+                <div class="progress-line completed"></div>
+                <div class="progress-step completed">2</div>
+                <div class="progress-line completed"></div>
+                <div class="progress-step active">3</div>
+                <div class="progress-line"></div>
+                <div class="progress-step">4</div>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p>� Enter your redeem code to unlock anniversary rewards!</p>
+            <div class="reward-preview">
+                <div class="reward-item">🎁 Exclusive Skin</div>
+                <div class="reward-item">💎 Free Diamonds</div>
+                <div class="reward-item">🏆 Anniversary Badge</div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="loading-overlay" id="loadingOverlay">
+        <div class="loading-spinner"></div>
+        <p>Verifying your redeem code...</p>
+    </div>
+    
+    <div class="error-modal" id="errorModal">
+        <div class="modal-content error-content">
+            <div class="error-icon">❌</div>
+            <h2>Invalid Redeem Code</h2>
+            <p id="errorMessage">The redeem code you entered is not valid. Please check and try again.</p>
+            <button onclick="closeErrorModal()" class="modal-btn error-btn">Try Again</button>
+        </div>
+    </div>
+    
+    <script src="/js/step3.js"></script>
+</body>
+</html>
