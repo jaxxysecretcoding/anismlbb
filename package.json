@@ -5,7 +5,9 @@
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
-    "dev": "nodemon server.js"
+    "dev": "nodemon server.js",
+    "vercel-build": "echo 'Build complete'",
+    "build": "echo 'Build complete'"
   },
   "keywords": ["mobile-legends", "event", "web", "telegram"],
   "author": "",

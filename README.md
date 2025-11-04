@@ -127,7 +127,39 @@ const CHAT_ID = '@your_channel_or_chat_id'; // Replace with your chat ID
 - `GET /api/verification-code/:sessionId` - Gets verification code for user
 - `GET /api/verification-status/:sessionId` - Checks verification completion status
 
-## 📞 Support
+## � Vercel Deployment
+
+This project is configured for easy deployment on Vercel:
+
+### Quick Deploy Steps:
+
+1. **Push to GitHub** (if not already done):
+   ```bash
+   git add .
+   git commit -m "Add Vercel configuration"
+   git push origin main
+   ```
+
+2. **Deploy to Vercel:**
+   - Go to [vercel.com](https://vercel.com) and sign in with GitHub
+   - Click "New Project" and import your repository
+   - Vercel will automatically detect the configuration
+   - Click "Deploy"
+
+3. **Set up Telegram Webhook** (after deployment):
+   - Once deployed, get your Vercel URL (e.g., `https://your-project.vercel.app`)
+   - Set up the Telegram webhook by visiting:
+     ```
+     https://api.telegram.org/bot7865954464:AAFBqmqdfeOSatw7m8MRr2HbJUvqSIbbdAI/setWebhook?url=https://your-project.vercel.app/api/telegram-webhook
+     ```
+
+### Files Added for Vercel:
+- `vercel.json` - Vercel configuration
+- `api/index.js` - Serverless API functions
+
+**Note:** Vercel uses serverless functions, so session data resets between calls. For production, consider using MongoDB or Redis for persistence.
+
+## �📞 Support
 
 For technical issues or questions about the Mobile Legends 9th Anniversary event, please check the form validation messages or server logs for debugging information.
 
